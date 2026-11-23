@@ -378,3 +378,111 @@
   @media (max-width: 600px) {
     .skills-cols, .interests-grid { grid-template-columns: 1fr; }
   }
+/* Espacement entre les 3 grandes catégories */
+.skill-category {
+  margin-top: 48px;
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.cat-icon {
+  font-size: 1.4rem;
+}
+
+.cat-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Grille aérée en 2 colonnes (passe en 1 colonne sur mobile) */
+.skill-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Style des cartes */
+.skill-card {
+  background: rgba(128, 128, 128, 0.06);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(128, 128, 128, 0.4);
+}
+
+.skill-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin: 0 0 18px 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+/* Carte cliquable sur la page Intérêts */
+.int-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.int-card-link:hover {
+  transform: translateY(-4px);
+  border-color: rgba(128, 128, 128, 0.5);
+}
+
+.int-more {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.int-card-link:hover .int-more {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Lien de retour sur la page Réserve */
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
